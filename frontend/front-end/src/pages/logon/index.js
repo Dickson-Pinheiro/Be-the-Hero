@@ -23,6 +23,7 @@ export default function Logon() {
         history.push('profile')
         } catch (err){
             alert('Falha no login, tente novamente')
+            console.log({id})
         }
     }
 
@@ -36,7 +37,7 @@ export default function Logon() {
             <h1>Faça Seu Logon</h1>
             
             <input placeholder='Sua ID'
-            value={id} onChange={e => setId(e.target.value)} />
+            value={id} onChange = {e => setId(e.target.value)} />
 
             <button className="button" type='submit'>Entrar</button>
             <Link className="back-link" to='/register'>
